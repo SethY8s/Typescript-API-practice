@@ -1,20 +1,26 @@
 {
   "scripts": {
     "start": "snowpack dev",
+    "dev": "nodemon server.js",
     "build": "snowpack build",
     "test": "echo \"This template does not include a test runner by default.\" && exit 1",
     "format": "prettier --write \"src/**/*.{ts,js}\"",
     "lint": "prettier --check \"src/**/*.{ts,js}\""
   },
   "dependencies": {
-    "canvas-confetti": "^1.2.0"
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1"
   },
   "devDependencies": {
     "@snowpack/plugin-typescript": "^1.2.1",
     "@types/canvas-confetti": "^1.0.0",
+    "@types/express": "^4.17.13",
+    "@types/node": "^17.0.33",
     "@types/snowpack-env": "^2.3.3",
+    "nodemon": "^2.0.16",
     "prettier": "^2.2.1",
     "snowpack": "^3.3.7",
-    "typescript": "^4.2.4"
+    "ts-node": "^10.7.0",
+    "typescript": "^4.6.4"
   }
 }

@@ -1,6 +1,8 @@
 export {}
 import { onClickFunction } from "./tsModules/function"
 
-const test = document.getElementById('test')
+const test = document.querySelector<HTMLButtonElement>('#test')
 
 test?.addEventListener('click', onClickFunction)
+
+console.log(import.meta.env.key)
