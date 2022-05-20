@@ -9,6 +9,6 @@ const onClickFunction = () => {
 
 const onSubmit = (e:SubmitEvent) => {
     e.preventDefault()
-    const input = document.getElementById('input').value
+    const input = (document.getElementById('input') as HTMLInputElement).value
     console.log(input)
 }
