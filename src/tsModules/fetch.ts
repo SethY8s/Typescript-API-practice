@@ -25,5 +25,5 @@ const fetchData = async (input: string) => {
  
 
   console.log(TempAndCords.list[0].main.temp)
-  document.getElementById('insert').innerHTML = TempAndCords.list[0].main.temp;
+  document.getElementById('insert').innerHTML = `${Math.ceil(TempAndCords.list[0].main.temp)} F`;
 };
