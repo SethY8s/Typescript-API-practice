@@ -24,6 +24,6 @@ const fetchData = async (input: string) => {
 
  
 
-  console.log(TempAndCords)
-  // document.getElementById('insert').innerHTML = TempAndCords.main.temp;
+  console.log(TempAndCords.list[0].main.temp)
+  document.getElementById('insert').innerHTML = TempAndCords.list[0].main.temp;
 };
