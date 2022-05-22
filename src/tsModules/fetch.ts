@@ -17,13 +17,19 @@ const fetchData = async (input: string) => {
   // let TempAndCords = await data.json();
 
   const data = await fetch(
-    `https://api.openweathermap.org/data/2.5/forecast?q=${input}&cnt=3&appid=${apiKey}&units=imperial`
+    `https://api.openweathermap.org/data/2.5/forecast?q=${input}&appid=${apiKey}&units=imperial`
   );
 
   let TempAndCords = await data.json();
 
- 
+  const threeDayData = [];
+  
+  for(let i = 5; i < TempAndCords.list.length; i = i + 8){
+    threeDayData.push(TempAndCords.list[i].main.temp)
+  }
 
-  console.log(TempAndCords.list[0].main.temp)
+  console.log(threeDayData)
+
+  console.log(TempAndCords);
   document.getElementById('insert').innerHTML = `${Math.ceil(TempAndCords.list[0].main.temp)} F`;
 };
