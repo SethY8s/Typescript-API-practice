@@ -1,4 +1,4 @@
-# New Project
+# Typescript APi Practice
 
 > ✨ Bootstrapped with Create Snowpack App (CSA).
 
