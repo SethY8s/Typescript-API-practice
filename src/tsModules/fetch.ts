@@ -10,11 +10,7 @@ import { apiKey } from './apikey';
 // }; These two functions do the same thing
 
 const fetchData = async (input: string) => {
-  // const data = await fetch(
-  //   `https://api.openweathermap.org/data/2.5/weather?q=${input}&appid=${apiKey}&cnt=7&units=imperial`
-  // );
-
-  // let TempAndCords = await data.json();
+  
 
   const data = await fetch(
     `https://api.openweathermap.org/data/2.5/forecast?q=${input}&appid=${apiKey}&units=imperial`
@@ -32,4 +28,11 @@ const fetchData = async (input: string) => {
 
   console.log(TempAndCords);
   document.getElementById('insert').innerHTML = `${Math.ceil(TempAndCords.list[0].main.temp)} F`;
+
+ 
+
+  document.getElementById('5day-insert').innerHTML = `${threeDayData.map(el => `<p>${el}</p>`)}`;
+ 
+
+
 };
